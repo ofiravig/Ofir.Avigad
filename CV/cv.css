@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(227, 235, 235);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'header img';
+
+    grid-gap: 15px;
+    padding: 15px;
+    font-size: 25px;
+
+}
+
+.header{
+    grid-area: header;
+    font-family: cursive;
+    background-color: #a1e3e6;
+}
+
+.img {
+    grid-area: img;
+    background-color: #a1e3e6;
+    width: 35vw;
+    height: 30vw;
+}
+
+.contactMe{
+    grid-area: img;
+    font-family: cursive;
+    width: 20vw;
+    height: 15vw;
+
+}
+
+.navigation{
+    font-family: cursive;
+    font-size: 1vw;
+    grid-column: 1 / span 2;
+    border: solid #5aaebf;
+    width: 10vw;
+    height: 10vw;
+    background-color: white;
+    border-radius: 100%;
+    animation: pulse 4s infinite ;
+    text-align:  center;
+    margin: 0.5vw;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.navigation:hover {
+    background-color: #5aaebf;
+    color:white;
+}
