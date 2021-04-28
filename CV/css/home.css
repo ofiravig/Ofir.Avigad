@@ -4,9 +4,7 @@ body{
 
 .grid-container{
     display: grid;
-    grid-template-areas:
-    'header img';
-
+    grid-template-areas: 'img header';
     grid-gap: 15px;
     padding: 15px;
     font-size: 25px;
@@ -22,8 +20,8 @@ body{
 .img {
     grid-area: img;
     background-color: #a1e3e6;
-    width: 35vw;
-    height: 30vw;
+    width: 25vw;
+    height: 32vw;
 }
 
 .contactMe{
