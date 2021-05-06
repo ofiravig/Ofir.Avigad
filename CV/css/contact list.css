@@ -1,0 +1,22 @@
+*{
+    font-family:  cursive;
+}
+
+body{
+    background-color: rgb(227, 235, 235);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 20px;
+}
+
+
+.header{
+    color: black;
+    font-size: 40px;
+    font-family:  cursive;
+}
+
