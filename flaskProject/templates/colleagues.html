@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Ofir Avigad CV</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/colleagues.css') }}">
+    </head>
+
+
+    <body>
+
+     <div class="grid-container">
+
+            <div align="center">
+                <br><br><img src="{{ url_for('static',filename='Images/My profile pic.jpg') }}" alt= "Ofir Avigad" style="max-width: 100%; height: auto;"> <br><br>
+
+                <button type="submit" class="buttun" onclick="location.href='/'"> Home page </button> <br>
+                <button type="submit" class="buttun" onclick="location.href='/cv'"> CV </button> <br>
+                <button type="submit" class="buttun" onclick="location.href='/projects'"> Projects </button> <br>
+                <button type="submit" class="buttun" onclick="location.href='/contact me'"> Contact me </button> <br>
+            </div>
+
+            <div class="header">
+                <h3>  My Colleagues </h3>
+            </div>
+
+            <div class="img1">
+               <img src="{{ url_for('static',filename='Images/Colleagues images/bar.jpg') }}" width=200px >
+                <div class="text">
+                    <h3>Bar Refeli</h3>
+                    <p>
+                        BLA <br> BLA <br> BLA <br> colleague
+                    </p>
+                </div>
+            </div>
+
+            <div class="img2">
+               <img src="{{ url_for('static',filename='Images/Colleagues images/bRAD.jpg') }}" width=200px >
+                <div class="text">
+                    <h3>Brad Pitt</h3>
+                    <p>
+                        BLA <br> BLA <br> BLA <br> colleague
+                    </p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="img3">
+               <img src="{{ url_for('static',filename='Images/Colleagues images/musk.jpeg') }}" width=200px >
+                <div class="text">
+                    <h3>Elon Musk</h3>
+                    <p>
+                        BLA <br> BLA <br> BLA <br> colleague
+                    </p>
+                </div>
+            </div>
+     </div>
+
+    </body>
+</html>

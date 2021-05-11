@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment8 - Ofir Avigad</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+</head>
+
+
+<body>
+
+        <div class="grid-container">
+
+            <div class="header">
+                <h2> {{ name |default('Ofir', false)}}'s Hobbies </h2>
+            </div>
+
+
+            <div class="img" align="center">
+                 <p>
+                    {% if name %}
+                        <h3>Hello {{ name}}!</h3>
+                    {% else %}
+                        <h3>Hello!</h3>
+                    {% endif %}
+
+                    <h3> So... would you like to hear about my hobbies?? </h3>
+                </p>
+
+                <div class="contactMe">
+                    <h2>I like to do a lot of things:</h2>
+                        <ul>
+                            {% for val in hobbies %}
+                                <li>{{ val }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endblock %}
+                        <br><br>
+
+                  <h2>How to find a good movie</h2>
+                 {% block other  %}
+                    {% include('assignment8Block.html') %}
+                 {% endblock %}
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

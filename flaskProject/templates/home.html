@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Ofir Avigad CV</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+    </head>
+
+    <body>
+
+        <div class="grid-container">
+
+            <div class="header">
+            <!--<div class="textMe"> -->
+                <h1> Ofir Avigad<br> Student for B.Sc. in IEM</h1>
+                <p>
+                    I'm a 4th-year student for B.Sc. in the IEM department at Ben-Gurion University
+                    <br>
+                    Experienced in independent learning and leadership, fast learner, excellent teamwork and communication skills
+                </p>
+                <br>
+
+                <div align="center">
+                    <button type="submit" class="navigation" onclick="location.href='/cv'"> CV </button>
+                    <button type="submit" class="navigation" onclick="location.href='/projects'"> Projects </button>
+                    <button type="submit" class="navigation" onclick="location.href='/colleagues'"> Colleagues </button>
+                    <button type="submit" class="navigation" onclick="location.href='/contact me'"> Contact me </button>
+                    <button type="submit" class="navigation" onclick="location.href='/contact list'"> **Contact list** </button>
+                </div>
+            </div>
+
+            <div class="img" align="center">
+                <img src="{{ url_for('static',filename='Images/My profile pic.jpg') }}" alt= "Ofir Avigad" style="max-width: 100%; height: auto;">
+
+                <div class="contactMe">
+                    <h1>Contact me</h1>
+                    <p><a href="mailto:Ofir.Avigad@gmail.com">Ofir.Avigad@gmail.com</a></p>
+                    <hr class="hr">
+                    <p><a href="https://api.whatsapp.com/send?phone=9720506831650">0506831650</a></p>
+                    <hr class="hr">
+                    <p><a href="https://www.facebook.com/Ofir.Avigad">My Facebook page</a></p>
+                    <hr class="hr">
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

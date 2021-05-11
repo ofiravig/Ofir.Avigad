@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ofir Avigad CV</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/contact me.css') }}">
+        <script src="{{ url_for('static',filename='js/js.js') }}"></script>
+    </head>
+<body>
+
+    
+    <form></form>
+        <div class="grid-container">
+
+            <div align="center">
+                <br><br><img src="{{ url_for('static',filename='Images/My profile pic.jpg') }}" alt= "Ofir Avigad" style="max-width: 100%; height: auto;"> <br><br>
+
+                <button type="submit" class="buttun" onclick="location.href='/'"> Home page </button> <br>
+                <button type="submit" class="buttun" onclick="location.href='/cv'"> CV </button> <br>
+                <button type="submit" class="buttun" onclick="location.href='/projects'"> Projects </button> <br>
+                <button type="submit" class="buttun" onclick="location.href='/colleagues'"> Colleagues </button> <br>
+            </div>
+
+            <div class="header">
+                <h3>  My Colleagues </h3>
+            </div>
+
+
+        <div class="container">
+
+            <label for="nameU"><b>Enter your Name</b></label>
+            <input type="text" placeholder="Your name"  id="nameU" name="nameU" required>
+
+            <label for="email"><b>Enter your Email</b></label>
+            <input type="text" placeholder="User@mail.com" id="email" name="email" required>
+
+            <label for="MSG"><b>Whats your Message</b></label>
+            <br>
+            <textarea id="MSG" name="YourQuestions" placeholder="Write your message here"  cols="30" rows="10"></textarea>
+            <br>
+            <div class="wrap">
+                <button type="submit"  class="sendButton" onclick="MessBox(document.getElementById('email').value,document.getElementById('nameU').value,document.getElementById('MSG').value)">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
