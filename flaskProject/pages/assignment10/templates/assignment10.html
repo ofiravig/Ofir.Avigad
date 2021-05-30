@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>assignment10</title>
+    <script src={{url_for('assignment10.static', filename='JS/JSAss10.js') }}></script>
+</head>
+
+
+<body>
+
+
+
+    <h3>Insert a new user</h3>
+    <form method="POST" action="/assignment10insert">
+        <input name="nickname" type="text" placeholder="enter user nickname">
+        <input name="name" type="text" placeholder="enter user name">
+        <input type="submit" onclick="MessBox()">
+    </form>
+    <hr>
+
+
+    <h3> Update user form</h3>
+    <form method="POST" action="/assignment10update">
+        <input name="nickname" type="text" placeholder="enter user nickname">
+        <input name="name" type="text" placeholder="enter user name">
+        <input type="submit" onclick="MessBox()">
+    </form>
+    <hr>
+
+
+    <h3>Delete user</h3>
+    <form method="POST" action="/assignment10delete">
+        <input name="nickname" type="text" placeholder="what user nickname to delete">
+        <input type="submit" onclick="MessBox()">
+    </form>
+    <hr>
+
+   <h3>list of Users</h3>
+    <ul>
+        {% for x in users %}
+            <li>User_nickname: {{x.user_nickname}}, User_name: {{x.user_name}}</li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

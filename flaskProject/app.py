@@ -1,6 +1,11 @@
 from flask import Flask, render_template, request, session, redirect
+import mysql.connector
+from pages.assignment10.assignment10 import assignment10
+
 app = Flask(__name__)
 app.secret_key = '123'
+
+app.register_blueprint(assignment10)
 
 @app.route('/')
 def hello_world():
