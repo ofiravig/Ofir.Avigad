@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, jsonify
 import mysql.connector
 from pages.assignment10.assignment10 import assignment10
 
@@ -87,6 +87,50 @@ def logout():
     session['user_nickname'] = ''
     return redirect('/assignment9')
 
+
+@app.route("/assignment11/users")
+def assignment11_users():
+    query = "select * from users"
+    query_result = interact_db(query=query, query_type='fetch')
+    response = "Table is empty"
+    if len(query_result) != 0:
+        response = query_result
+    response = jsonify(response)
+    return response
+
+
+@app.route("/assignment11/users/selected", defaults={'user_id': 123})
+@app.route("/assignment11/users/selected/<int:user_id>")
+def assignment11_select_user(user_id):
+    query = "select * from users where user_id='%s';" % user_id
+    query_result = interact_db(query=query, query_type='fetch')
+    response = "ID not exist"
+    if len(query_result) != 0:
+        response = query_result
+    response = jsonify(response)
+    return response
+
+
+def interact_db(query, query_type: str):
+    return_value = False
+    connection = mysql.connector.connect(host='localhost',
+                                         user='root',
+                                         passwd='root',
+                                         database='ex10')
+    cursor = connection.cursor(named_tuple=True)
+    cursor.execute(query)
+
+    if query_type == 'commit':
+        connection.commit()
+        return_value = True
+
+    if query_type == 'fetch':
+        query_result = cursor.fetchall()
+        return_value = query_result
+
+    connection.close()
+    cursor.close()
+    return return_value
 
 
 if __name__ == '__main__':
